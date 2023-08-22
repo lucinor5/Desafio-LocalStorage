@@ -1,10 +1,6 @@
-const guardar = document.getElementById('buttonText')
-const texto = document.getElementById('inputText').value
+const guardar = document.getElementById('buttonText');
 
-localStorage.setItem('parrafo')
-
-guardar.addEventListener('click', function() {
-   const local = localStorage.getItem('parrafo')
-
-   texto.innerHTML += local
-})
+guardar.addEventListener('click', function () {
+    let texto = document.getElementById('inputText').value;
+    localStorage.setItem('parrafo', texto);
+});
